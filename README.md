@@ -1,6 +1,6 @@
-# Trabalho Prático: Um estudo empírico sobre programação concorrente com threads
+# Trabalho Prático: O Problema dos Leitores e Escritores
 
-<sub>Última atualização: 26/04/2023</sub>
+<sub>Última atualização: 21/05/2023</sub>
 
 ## Sumário
 
@@ -21,15 +21,9 @@ O objetivo deste trabalho é verificar se é válida hipótese de que programas 
 
 ## Introdução
 
-O *merge sort* é um conhecido eficiente algoritmo de ordenação baseado no paradigma de divisão e conquista (em inglês, *divide-and-conquer*) proposto por John von Neumann em 1945. Na perspectiva desse paradigma, o problema é recursivamente decomposto em dois ou mais subproblemas menores até que sejam resolvidos de forma simples e direta, e as soluções desses subproblemas são então combinadas até comporem a solução para o problema original. No caso do *merge sort*, o (sub)arranjo de elementos a serem ordenados é particionado, de forma recursiva, em duas partes até que se tenha um subarranjo composto de um único elemento, o qual já se considera ordenado. Em seguida, uma operação chamada merge une duas partes ordenadas do arranjo em uma outra também ordenada. A figura a seguir ilustra como o *merge sort* funciona.
+O Problema dos Leitores e Escritores (*Readers-Writers Problem*) é um problema clássico no contexto de programas concorrentes, o qual serve inclusive como modelo para outros problemas com características similares. Proposto originalmente por P. J. Courtois, F. Heymans e D. L. Parnas em seu artigo [*Concurrent control with “readers” and “writers”*](https://doi.org/10.1145/362759.362813), publicado em 1971, o problema diz respeito ao compartilhamento 
 
-<p align="center">
-   <img width="40%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/1200px-Merge_sort_algorithm_diagram.svg.png" alt="Merge sort algorithm diagram" /><br/>
- <span><em>Exemplo de execução do algoritmo <em>merge sort</em> para ordenação <em>top-down</em> de um arranjo de inteiros com sete elementos (fonte: Wikipedia)</em></span>
-</p>
-
-Independentemente do caso (melhor ou pior), a complexidade do *merge sort* em termos de tempo de execução é sempre da ordem de $n * \log n$, em que $n$ é o número de elementos do arranjo a ser ordenado, fazendo com que esse algoritmo seja uma eficiente opção para a ordenação de conjuntos de dados. Além disso, um diferencial importante do *merge sort* é que ele é considerado um algoritmo estável, isto é, a ordenação mantém a ordem dos elementos iguais em que caso o elemento mais à esquerda seja menor ou igual ao mais à direita, ele deve ser colocado primeiro no arranjo ordenado. 
-
+There is a shared resource that should be accessed by multiple processes. There are two types of processes in this context. They are reader and writer. Any number of reader can read from the shared resource simultaneously, but only one writer can write to the shared resource. When a writer is writing data to the resource, no other process can access the resource. A writer cannot write to the resource if there are non-zero readers accessing the resource at that time.
 
 ## Tarefas
 
