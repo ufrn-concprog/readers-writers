@@ -53,7 +53,7 @@ Uma vez realizadas as tarefas de implementação, deverá ser elaborado um relat
 - como é garantida a corretude da solução com relação a concorrência; eventuais dificuldades encontradas durante o desenvolvimento, e;
 - instruções para compilação e execução do programa.
 
-Além do relatório escrito, deverá ser **obrigatoriamente** respondida a seguinte pergunta no arquivo [`author.md`](https://github.com/ufrn-concprog/readers-writers/tree/master/author.md) presente no repositório, na seção [Garantia de Corretude](https://github.com/ufrn-concprog/readers-writer/tree/master/author.md#garantia-de-corretude).:
+Além do relatório escrito, deverá ser **obrigatoriamente** respondida a seguinte pergunta no arquivo [`author.md`](https://github.com/ufrn-concprog/readers-writers/tree/master/author.md) presente no repositório, na seção [Garantia de Corretude](https://github.com/ufrn-concprog/readers-writer/tree/master/author.md#garantia-de-corretude):
 
 *As soluções implementadas garantem a ausência de condições de deadlock e starvation? Se sim, como? Se não, como fazer com que haja tal garantia?*
 
